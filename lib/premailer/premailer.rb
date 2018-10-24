@@ -102,6 +102,8 @@ class Premailer
       '-premailer-height' => 'height'
     },
     'img' => {
+      'height' => 'height',
+      'width' => 'width',
       'float' => 'align',
       '-premailer-width' => 'width',
       '-premailer-height' => 'height'
