@@ -131,13 +131,7 @@ class Premailer
           end
         end
 
-        @processed_doc = doc
-        if is_xhtml?
-          # we don't want to encode carriage returns
-          @processed_doc.to_xhtml(:encoding => @options[:output_encoding]).gsub(/&\#(xD|13);/i, "\r")
-        else
-          @processed_doc.to_html(:encoding => @options[:output_encoding])
-        end
+        doc.to_xhtml(:encoding => @options[:output_encoding])
       end
 
       # Create a <tt>style</tt> element with un-mergable rules (e.g. <tt>:hover</tt>)
